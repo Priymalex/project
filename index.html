@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    </head>
+    <body>
+        <header>
+            <img src="logo.svg" alt="logo">
+            <div class = "header-text">
+                <nav>
+                        <p><a>О нас</a></p>
+                        <p><a>Проекты</a></p>
+                        <p><a>Материалы</a></p>
+                        <p><a>Отзывы</a></p>
+                        
+                </nav>
+                <p>+7 999 999 999</p>
+            </div>
+            <nav class="navbar">
+                <button class="hamburger-button" aria-label="Открыть меню" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                </button>
+                <ul class="menu-items">
+                    <li><a href="#">Главная</a></li>
+                    <li class="has-submenu">
+                    <a href="#">Услуги</a>
+                    <ul class="submenu">
+                    <li><a href="#">Веб-разработка</a></li>
+                    <li><a href="#">Дизайн</a></li>
+                    <li><a href="#">SEO</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Контакты</a></li>
+                    </ul>
+                    </nav>
+        </header>
+        <main>
+            <div class = "hero">
+                <div class = "hero-header">
+                    <div class="hero-header-text">
+                        <h1>Эксклюзивная<br> и нестандартная<br> мебель для дома</h1>
+                    </div>
+                    <a href = "#form" ><p style="text-decoration: underline; font-size: 18px; text-transform: uppercase;">заказать проект</p></a>
+                </div>
+                <div class = "hero-content">
+                    <div class = "hero-content-left">
+                            <p style= "font-size: 18px;  line-height: 1.6;">Мы можем произвести любую мебель для вашего проекта и найти производственное решение любой задумки.</p>
+                            <img src = "michael-oxendine-GHCVUtBECuY-unsplash (1) 1.png" alt = "" style="width: 80%; height: 50%;">
+                    </div>
+                    <div class = "hero-content-right">
+                        <img src="spacejoy-IH7wPsjwomc-unsplash (1) 1.png" alt="" style="width: 100%; height: 100%;">
+                    </div>
+                </div>
+            </div>
+            <div class = "about">
+                <div class="about-left">
+                    <h2><span class="desktop-about">Более 5 лет создаем мебель для вашего комфорта</span><span class="mobile-about">О компании</span></h2>
+                </div>
+                <div class="about-right">
+                    <div class = "about-right-uppertext">
+                        <p class="about-right-uppertext-text">Мы — команда профессионалов, которые могут произвести любую мебель для вашего проекта, а также найти производственное решение любой задумки.</p>
+                        <p class="about-right-uppertext-text">Наша основная цель — реализовывать самые смелые задумки, и делать это качественно и аккуратно.</p>
+                        <p class="about-right-uppertext-text">В качестве материалов мы используем натуральные — стекло, дерево, бетон, камень, металл и эпоксидную смолу.</p>
+                    </div>
+                    <div class = "about-right-lowertext">
+                        <h3>1 год</h3>
+                        <p>гарантии на всю<br>продукцию</p>
+                        <h3>300+</h3>
+                        <p>выполненных<br>проектов</p>
+                        <h3>15 дней</h3>
+                        <p>срок производства</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "steps">
+                <div class = "steps-left">
+                    <h2>Как мы работаем</h2>
+                </div>
+                <div class = "steps-right">
+                    <div class = "steps-right-header">
+                        <p>Алгоритм работы с нами для удобства и понимания проекта</p>
+                    </div>
+                    <div class = "steps-right-content">
+                        <div class = "steps-right-content-part" style="margin-top: 2vh;">
+                            <h3 class = "steps-h">Идея</h3>
+                            <p class = "steps-text">Клиент приходит к нам с идеей. Это может быть изображение: эскиз или другой референс. А мы думаем над тем, как реализовать данные идеи, делаем технические чертежи и предлагаем решения по материалам.</p>
+                        </div>
+                        <div class = "steps-right-content-part">
+                            <h3 class = "steps-h">Техническое задание</h3>
+                            <p class = "steps-text">Вместе с клиентом формулируем корректное ТЗ, которое включает в себя визуализацию изделия, эскизный чертёж с габаритами, информацию по материалам и отделке, срок реализации проекта и другие обязательные пункты.</p>
+                        </div>
+                        <div class = "steps-right-content-part">
+                            <h3 class = "steps-h">Коммерческое предложение</h3>
+                            <p class = "steps-text">Предпочтительно используем натуральные материалы. Но любую смету можем оптимизировать, упростив материалы или конструктив. Сможем подстроиться под бюджет клиента и согласуем коммерческое предложение.</p>
+                        </div>
+                        <div class = "steps-right-content-part">
+                            <h3 class = "steps-h">Подготовка рабочего проекта</h3>
+                            <p class = "steps-text">Создадим рабочую документацию и чертежи. Это фундамент качественного производства. На этом этапе утверждаем с клиентом все габариты и материалы, чертежи и приступаем к производству.</p>
+                        </div>
+                        <div class = "steps-right-content-part">
+                            <h3 class = "steps-h">Производство и монтаж</h3>
+                            <p class = "steps-text">Производство занимает от 15 рабочих дней, в зависимости от сложности и объёма. Монтажом тоже занимаемся самостоятельно. Ведь мы это сделаем быстро и аккуратно.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Проекты</h2>
+            <div class="container">
+                <div class = "gallery-container">
+                    <div class = "gallery-slider">
+                    <img class="slide" src="project (1).png" alt="">
+                    <img class="slide" src="project (2).png" alt="">
+                    <img class="slide" src="project (3).png" alt="">
+                    <img class="slide" src="project (4).png" alt="">
+                    <img class="slide" src="project-img.png" alt="">
+                    <img class="slide" src="project.png" alt="">
+                </div>
+            </div>
+            </div>
+            <h2>Отзывы</h2>
+            <div class = "reviews">
+                    <div class = "review">
+                        <img class="review-icon" src = "icon.png" alt="icon">
+                        <div class= "review-text">
+                            <p class = "text-large-web">Игорь Антонов</p>
+                            <p>Обратилась к Aveji по рекомендации. Команда сразу поняла, какой дизайн я хочу. Предоставили несколько вариантов и в течение недели сделали наброски. Итог понравился, все на высшем уровне.</p>
+                        </div>
+                    </div>
+                    <div class = "review">
+                        <img class="review-icon" src = "icon.png" alt="icon">
+                        <div class= "review-text">
+                            <p class = "text-large-web">Ольга Иванова</p>
+                            <p>После пары заказов у компании Aveji убедилась, что за мебелью теперь только к ним. Абсолютно любые решения, в любых размерах и форм-факторе, то что нужно!</p>
+                        </div>
+                    </div>
+                    <div class = "review">
+                        <img class="review-icon" src = "icon.png " alt="icon">
+                        <div class= "review-text">
+                            <p class = "text-large-web">Аркадий Макаров</p>
+                            <p>Aveji — настоящие профессионалы своего дела. Быстро поняли мою задумку, сделали дизайн, согласовали и изготовили мебель. А потом еще и бесплатно все собрали на месте. Большое спасибо!</p>
+                        </div>
+                    </div>
+            </div>
+            <div class= "form" id = "form">
+                <div class = "img-form"><img src = "bilal-mansuri-yJ78NE83YH8-unsplash 1.png" alt = "img-form"></div>
+                    <div class = "form-form">
+                    <h2>Хотите заказать проект?</h2>
+                    <p>Оставьте заявку, и мы вам перезвоним</p>
+                    <form active = "#" method="POST">
+                        <input type="text" name = "firstName" class = "formInput" placeholder="Имя ">
+                        <input type="email" name = "mail" class = "formInput" placeholder="E-mail ">
+                        <input type="tel" name="telephone" class = "formInput" placeholder="Телефон ">
+                        <button>Отправить заявку</button>
+                    </form>
+                    <div class="apps">
+                        <img src="App Store 1.png" alt="app1">
+                        <img src="Google Play 1.png" alt="app2">
+                    </div>
+                    </div>
+            </div>
+        </main>
+        <footer>
+            <div class = "footer-social">
+                <p>Вконтакте</p>
+                <p>Телеграм</p>
+            </div>
+            <p>Политика конфеденциальности</p>
+            <p>Оплата и доставка</p>
+            <p>© 2023 Aveji<br>Все права защищены</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            $('.gallery-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                ]
+            });
+
+            function checkValidName()
+            {
+                if(!nameRegex.test(fnValid.value)) {
+                    alert("Ошибка! Имя должно содержать только буквы");
+                    return false;
+                }
+                else if(fnValid.value.trim() === ""){
+                    alert("Ошибка! Поле 'Имя' обязательно для заполнения");
+                    return false;
+                }
+                return true;
+            }
+
+            function checkValidEmail(){
+                if(!emailRegex.test(mail.value)) {
+                    alert("Ошибка! Введите корректный email адрес");
+                    return false;
+                }
+                else if(mail.value.trim() === ""){
+                    alert("Ошибка! Поле 'Email' обязательно для заполнения");
+                    return false;
+                }
+                return true;
+            }
+
+            function checkValidEmail(){
+
+            }
+    
+        function validateForm() {
+            const validations = [
+                checkValidName(),
+                checkValidEmail(),
+                checkTel()
+            ];
+            
+            return validations.every(result => result === true);
+            }
+
+    async function sendForm() {
+            if (!validateForm()) {
+                return;
+            }
+            
+            const formData = {
+                firstName: fnValid.value,
+                mail: mailValid.value,
+                tel: telValid.value,
+            };
+            
+            
+            sendBtn.disabled = true;
+            sendBtn.textContent = "Отправка...";
+            
+            try {
+                const response = await fetch(FORMCARRY_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok && result.code === 200) {
+                    alert("Форма успешно отправлена! Спасибо за ваше сообщение.");
+                    document.getElementById("form").reset();
+                    hidePopup();
+                } else {
+                    
+                    alert("Ошибка при отправке формы. Пожалуйста, попробуйте еще раз. Код ошибки: " + (result.code || response.status));
+                }
+            } catch (error) {
+                
+                alert("Произошла ошибка при отправке формы. Проверьте подключение к интернету и попробуйте еще раз.");
+                console.error("Ошибка отправки формы:", error);
+            } finally {
+                
+                sendBtn.disabled = false;
+                sendBtn.textContent = "Отправить";
+            }
+}
+            window.addEventListener("DOMContentLoaded")
+            {
+                    console.log("DOMContentLoaded");
+            }
+
+          
+        </script>
+    </body>
+</html>
