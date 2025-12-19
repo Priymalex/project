@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
+        <title>Aveji</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,36 +16,27 @@
             <img src="logo.svg" alt="logo">
             <div class = "header-text">
                 <nav>
-                        <p><a>О нас</a></p>
-                        <p><a>Проекты</a></p>
-                        <p><a>Материалы</a></p>
-                        <p><a>Отзывы</a></p>
+                        <p><a href = "#hero">О нас</a></p>
+                        <p><a href = "#projects">Проекты</a></p>
+                        <p><a href = "#about">Материалы</a></p>
+                        <p><a href = "#reviews">Отзывы</a></p>
                         
                 </nav>
                 <p>+7 999 999 999</p>
             </div>
-            <nav class="navbar">
-                <button class="hamburger-button" aria-label="Открыть меню" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                </button>
-                <ul class="menu-items">
-                    <li><a href="#">Главная</a></li>
-                    <li class="has-submenu">
-                    <a href="#">Услуги</a>
-                    <ul class="submenu">
-                    <li><a href="#">Веб-разработка</a></li>
-                    <li><a href="#">Дизайн</a></li>
-                    <li><a href="#">SEO</a></li>
+            <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle"><span></span></label>
+                    <ul class="menu__box">
+                        <li><a class="menu__item" href="#hero">О нас</a></li>
+                        <li><a class="menu__item" href="#projects">Проекты</a></li>
+                        <li><a class="menu__item" href="#about">Материалы</a></li>
+                        <li><a class="menu__item" href="#reviews">Отзывы</a></li>
                     </ul>
-                    </li>
-                    <li><a href="#">Контакты</a></li>
-                    </ul>
-                    </nav>
+            </div>
         </header>
         <main>
-            <div class = "hero">
+            <div class = "hero" id = "hero">
                 <div class = "hero-header">
                     <div class="hero-header-text">
                         <h1>Эксклюзивная<br> и нестандартная<br> мебель для дома</h1>
@@ -62,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div class = "about">
+            <div class = "about" id = "about">
                 <div class="about-left">
                     <h2><span class="desktop-about">Более 5 лет создаем мебель для вашего комфорта</span><span class="mobile-about">О компании</span></h2>
                 </div>
@@ -115,7 +106,7 @@
                 </div>
             </div>
             <h2>Проекты</h2>
-            <div class="container">
+            <div class="container" id = "projects">
                 <div class = "gallery-container">
                     <div class = "gallery-slider">
                     <img class="slide" src="project (1).png" alt="">
@@ -128,7 +119,7 @@
             </div>
             </div>
             <h2>Отзывы</h2>
-            <div class = "reviews">
+            <div class = "reviews" id = "reviews">
                     <div class = "review">
                         <img class="review-icon" src = "icon.png" alt="icon">
                         <div class= "review-text">
@@ -156,11 +147,11 @@
                     <div class = "form-form">
                     <h2>Хотите заказать проект?</h2>
                     <p>Оставьте заявку, и мы вам перезвоним</p>
-                    <form active = "#" method="POST">
+                    <form action = "#" method="POST">
                         <input type="text" name = "firstName" class = "formInput" placeholder="Имя ">
                         <input type="email" name = "mail" class = "formInput" placeholder="E-mail ">
                         <input type="tel" name="telephone" class = "formInput" placeholder="Телефон ">
-                        <button>Отправить заявку</button>
+                        <button name = "sendButton">Отправить заявку</button>
                     </form>
                     <div class="apps">
                         <img src="App Store 1.png" alt="app1">
@@ -171,137 +162,16 @@
         </main>
         <footer>
             <div class = "footer-social">
-                <p>Вконтакте</p>
-                <p>Телеграм</p>
+               <a href=""><p>Вконтакте</p></a>
+                <a href=""><p>Телеграм</p></a>
             </div>
-            <p>Политика конфеденциальности</p>
-            <p>Оплата и доставка</p>
+            <p id = "policy">Политика конфеденциальности</p>
+            <p id = "payment">Оплата и доставка</p>
+            <p id = "desktop-part-footer">Политика конфеденциальности / Оплата и доставка</p>
             <p>© 2023 Aveji<br>Все права защищены</p>
         </footer>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script>
-            $('.gallery-slider').slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                responsive: [
-                    {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                    }
-                    },
-                    {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                    },
-                    {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                    }
-                ]
-            });
-
-            function checkValidName()
-            {
-                if(!nameRegex.test(fnValid.value)) {
-                    alert("Ошибка! Имя должно содержать только буквы");
-                    return false;
-                }
-                else if(fnValid.value.trim() === ""){
-                    alert("Ошибка! Поле 'Имя' обязательно для заполнения");
-                    return false;
-                }
-                return true;
-            }
-
-            function checkValidEmail(){
-                if(!emailRegex.test(mail.value)) {
-                    alert("Ошибка! Введите корректный email адрес");
-                    return false;
-                }
-                else if(mail.value.trim() === ""){
-                    alert("Ошибка! Поле 'Email' обязательно для заполнения");
-                    return false;
-                }
-                return true;
-            }
-
-            function checkValidEmail(){
-
-            }
-    
-        function validateForm() {
-            const validations = [
-                checkValidName(),
-                checkValidEmail(),
-                checkTel()
-            ];
-            
-            return validations.every(result => result === true);
-            }
-
-    async function sendForm() {
-            if (!validateForm()) {
-                return;
-            }
-            
-            const formData = {
-                firstName: fnValid.value,
-                mail: mailValid.value,
-                tel: telValid.value,
-            };
-            
-            
-            sendBtn.disabled = true;
-            sendBtn.textContent = "Отправка...";
-            
-            try {
-                const response = await fetch(FORMCARRY_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
-                const result = await response.json();
-                
-                if (response.ok && result.code === 200) {
-                    alert("Форма успешно отправлена! Спасибо за ваше сообщение.");
-                    document.getElementById("form").reset();
-                    hidePopup();
-                } else {
-                    
-                    alert("Ошибка при отправке формы. Пожалуйста, попробуйте еще раз. Код ошибки: " + (result.code || response.status));
-                }
-            } catch (error) {
-                
-                alert("Произошла ошибка при отправке формы. Проверьте подключение к интернету и попробуйте еще раз.");
-                console.error("Ошибка отправки формы:", error);
-            } finally {
-                
-                sendBtn.disabled = false;
-                sendBtn.textContent = "Отправить";
-            }
-}
-            window.addEventListener("DOMContentLoaded")
-            {
-                    console.log("DOMContentLoaded");
-            }
-
-          
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>
