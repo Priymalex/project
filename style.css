@@ -4,6 +4,97 @@
     font-weight: 400;
     src: local('Roboto'), local('Roboto-Regular'), url(/fonts/Roboto.woff2) format('woff2');
   }
+  
+button:hover{
+    background-color: #DDD7C0;
+}
+  #menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+
+  width: 150px;
+  height: 100%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+
+  color: #333;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+  
+  
+  .footer-social a{
+    text-decoration: none;
+  }
+  .header-text a{
+    text-decoration: none;
+  }
+  
   a{
      transition: color 0.3s ease;
      color: black;
@@ -76,73 +167,13 @@ h3{
 }
 header{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     width: 100%;
 }
 .header-text{
     display: none;
 }
-/* Стили для навигационной панели */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    
-    color: white;
-    position: relative;
-    }
-    
-    /* Стили для кнопки-гамбургера */
-    .hamburger-button {
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    }
-    
-    /* Стили для линий гамбургера */
-    .hamburger-line {
-    width: 100%;
-    height: 3px;
-    background-color: black;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-    }
-    
-    /* Стили для меню */
-    .menu-items {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 1rem 0;
-    list-style-type: none;
-    margin: 0;
-    display: none;
-    }
-    
-    .menu-items li {
-    padding: 0.5rem 1rem;
-    }
-    
-    .menu-items li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    }
-    
-    /* Показать меню при активации */
-    .menu-active {
-    display: block;
-    }
     
 .main-hero{
     display: flex;
@@ -243,50 +274,6 @@ header{
     color: #212529;
 }
 
-@media screen and (min-width: 768px) {
-    .steps {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-top: 12vh;
-        width: 100%;
-    }
-    
-    .steps-left {
-        width: 35%;
-        margin-bottom: 0;
-    }
-    
-    .steps-right {
-        width: 60%;
-    }
-    
-    .steps-right-header {
-        width: 70%;
-        margin-bottom: 4vh;
-    }
-    
-    .steps-right-content-part {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 2.5vh 0;
-    }
-    
-    .steps-h {
-        width: 35%;
-        font-size: 1.5rem;
-        margin-right: 5%;
-    }
-    
-    .steps-text {
-        width: 60%;
-        margin-top: 0;
-        font-size: 1.1rem;
-    }
-}
-
 @media screen and (min-width: 1024px) {
     .steps-left {
         width: 30%;
@@ -357,7 +344,8 @@ input{
 .apps{
     display:flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content:space-between;
+    width: 90%;
 }
 
 footer{
@@ -455,7 +443,7 @@ footer{
 .slick-next {
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: black;
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -494,6 +482,9 @@ footer{
 
 .slick-track {
     display: flex;
+}
+#desktop-part-footer{
+    display: none;
 }
 
 /* Адаптивность для слайдера */
@@ -553,6 +544,7 @@ footer{
 
 
 @media screen and (min-width:768px) {
+    .hamburger-menu{display: none;}
     main{
         width: 75%;
     }
@@ -576,12 +568,7 @@ footer{
         justify-content: space-between;
         height: 100%;
     }
-    .hamburger-button{
-        display: none;
-    }
-    .navbar{
-        display: none;
-    }
+    
     p{
         margin: 0;
     }
@@ -676,26 +663,47 @@ footer{
     {
         margin-bottom: 2vh;
     }
-    .steps{
+    .steps {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
         margin-top: 12vh;
+        width: 100%;
     }
-    .steps-left{
-        display: flex;
-        flex-direction: column;
-        height:100%;
-        width: 40%;
-    }
-    .steps-right{
-        display: flex;
-        flex-direction: column;
-        height:100%;
-        width: 50%;
-    }
-    .steps-right-header{
+    
+    .steps-left {
         width: 35%;
+        margin-bottom: 0;
+    }
+    
+    .steps-right {
+        width: 60%;
+    }
+    
+    .steps-right-header {
+        width: 70%;
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+    
+    .steps-right-content-part {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2.5vh 0;
+    }
+    
+    .steps-h {
+        width: 35%;
+        font-size: 1.5rem;
+        margin-right: 5%;
+    }
+    
+    .steps-text {
+        width: 60%;
+        margin-top: 0;
+        font-size: 1.1rem;
     }
     .steps-right-content-part{
         display: flex;
@@ -732,6 +740,11 @@ footer{
         display: flex;
     }
 
+    .apps{
+        justify-content: space-between;
+        width: 45%;
+    }
+
     footer{
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -740,7 +753,18 @@ footer{
     }
 
     .footer-social{
-        justify-content: flex-end;
+        justify-content: space-between;
+        width: 15%;
+    }
+    #policy{
+        display: none;
+    }
+    #payment{
+        display: none;
+    }
+    #desktop-part-footer{
+    display: flex;
+    text-transform: none;
     }
 }
 
@@ -754,4 +778,15 @@ footer{
     .review{
         width: 30%;
     }
+}
+
+/* Изменяем цвет стандартных стрелок Slick */
+.slick-prev:before, 
+.slick-next:before {
+    color: #DDD7C0 !important;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+    color: #212529 !important;
 }
